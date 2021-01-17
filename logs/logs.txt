@@ -1,0 +1,2 @@
+15:51:52.637 [main] ERROR com.epam.compositeAndChain.service.TextService - 
+15:52:31.676 [main] ERROR com.epam.compositeAndChain.service.TextService - 
