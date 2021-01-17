@@ -83,4 +83,16 @@ public class TextServiceTest {
         expected.put("page", 2);
         Assert.assertEquals(actual, expected);
     }
+
+    public void testCountVowel() {
+        int actual = service.countVowel(composite);
+        int expected = 240;
+        Assert.assertEquals(actual, expected);
+    }
+
+    public void testCountConsonant() {
+        int actual = service.countConsonant(composite);
+        int expected = 361;
+        Assert.assertEquals(actual, expected);
+    }
 }

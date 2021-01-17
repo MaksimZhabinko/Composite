@@ -96,4 +96,42 @@ public class TextService {
             throw new RuntimeException();
         }
     }
+
+    public int countVowel(Composite composite) {
+        int result = 0;
+        if (composite != null && composite.getType() == CompositeType.PARAGRAPH) {
+            List<Character> symbols = DataParse.parseBySymbols(composite.toString().toLowerCase());
+            for (Character symbol : symbols) {
+                result += isVowel(symbol.toString());
+            }
+        }
+        return result;
+    }
+
+    private int isVowel(String symbol) {
+        String vowels = "aeqyuioj";
+        if (vowels.contains(symbol)) {
+            return 1;
+        }
+        return 0;
+    }
+
+    public int countConsonant(Composite composite) {
+        int result = 0;
+        if (composite != null && composite.getType() == CompositeType.PARAGRAPH) {
+            List<Character> symbols = DataParse.parseBySymbols(composite.toString().toLowerCase());
+            for (Character symbol : symbols) {
+                result += isConsonant(symbol.toString());
+            }
+        }
+        return result;
+    }
+
+    private int isConsonant(String s) {
+        String consonant = "bcdfghjklmnpqrstvwxz";
+        if (consonant.contains(s)) {
+            return 1;
+        }
+        return 0;
+    }
 }
